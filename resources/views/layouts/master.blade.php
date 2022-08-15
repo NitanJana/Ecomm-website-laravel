@@ -30,8 +30,32 @@
 
 <style>
     .custom-login{
-        height: 580px;
-        padding-top: 180px;
+        height: 500px;
+        padding-top: 100px;
     }
+
+    img.slider-img{
+        height: 500px !important;
+    }
+    .custom-product{
+        height: 1000px;
+        width: 80%;
+    }
+    .slider-text{
+      background-color: #35443585 !important;
+    }
+    .trending-image{
+        height:100px;
+    }
+    
+    .trending-item{
+        float: left;
+        width:33.3%;
+        
+    }
+    .trending-wrapper{
+        margin: 30px;
+    }
+    
 </style>
 </html>
