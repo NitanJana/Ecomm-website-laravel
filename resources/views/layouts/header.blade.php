@@ -23,33 +23,36 @@ if (Session::has('user')) {
                     <a class="nav-link" href="#">Orders</a>
                 </li>
 
+
+
+                <li>
+                    <form action="/search"class="d-flex">
+                        <input name="query" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart(<b>{{ $total }}</b>)</a>
+                    <a class="nav-link" href="/cartlist">Cart(<b>{{ $total }}</b>)</a>
                 </li>
 
                 @if (Session::has('user'))
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            {{Session::get('user')['name']}}
+                            {{ Session::get('user')['name'] }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/logout">Logout</a></li>
-                            
+
                         </ul>
                     </li>
-                    @else
+                @else
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
                 @endif
             </ul>
-            <form action="/search"class="d-flex">
-                <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-
-
         </div>
     </div>
 </nav>

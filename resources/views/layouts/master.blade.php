@@ -70,6 +70,13 @@
     .custom-footer {
         bottom: 10px;
     }
+    .cart-list-divider{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        margin-top: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 </style>
 
 </html>
