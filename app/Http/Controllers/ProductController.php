@@ -21,8 +21,6 @@ class ProductController extends Controller
     }
 
     function search(Request $req) {
-        
-        
         $data = Product::where('name','like','%'.$req->input('query').'%')->get();
         return view('search',['products'=>$data]);
     }
@@ -33,7 +31,7 @@ class ProductController extends Controller
             $cart->user_id = $req->session()->get('user')['id'];
             $cart->product_id = $req->product_id;
             $cart->save();
-            return redirect('/');
+            return redirect()->back();
         }
         else{
             return redirect('/login');
@@ -51,8 +49,23 @@ class ProductController extends Controller
         $products = DB::table('cart')
         ->join('products','cart.product_id','=','products.id')
         ->where('cart.user_id',$user_id)
-        ->select('products.*')->get();
+        ->select('products.*','cart.id as cart_id')->get();
 
         return view('cartlist',['products'=>$products]);
+    }
+
+    function removeItem($id){
+        Cart::destroy($id);
+        return redirect('cartlist');
+    }
+
+    function orderNow(){
+        $user_id = Session::get('user')['id'];
+        $total =  DB::table('cart')
+        ->join('products','cart.product_id','=','products.id')
+        ->where('cart.user_id',$user_id)
+        ->sum('products.price');
+
+        return view('ordernow',['total'=>$total]);
     }
 }
