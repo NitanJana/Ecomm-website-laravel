@@ -1,7 +1,5 @@
 @extends('layouts.master')
-@push('title')
-    <title>E-Comm Project</title>
-@endpush
+
 @section('content')
     <div class="container custom-login">
         <div class="row">

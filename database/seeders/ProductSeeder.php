@@ -22,21 +22,21 @@ class ProductSeeder extends Seeder
                 'price' => '1000',
                 'description' => 'Samsung TV with a lot of features',
                 'category' => 'tv',
-                'gallery' => 'https://www.w3schools.com/bootstrap/la.jpg'
+                'gallery' => 'https://www.lg.com/us/images/cell-phones/md07522101/gallery/desktop-01.jpg'
             ],
             [
                 'name' => 'Sony tv',
                 'price' => '1200',
                 'description' => 'Sony TV with a lot of features',
                 'category' => 'mobile',
-                'gallery' => 'https://www.w3schools.com/bootstrap/chicago.jpg'
+                'gallery' => 'https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8.jpg'
             ],
             [
                 'name' => 'Samsung Fridge',
                 'price' => '2200',
                 'description' => 'Samsung fridge with a lot of features',
                 'category' => 'mobile',
-                'gallery' => 'https://www.w3schools.com/bootstrap/ny.jpg'
+                'gallery' => 'https://image.shutterstock.com/image-vector/realistic-smartphone-mockup-cellphone-frame-600w-1401850631.jpg'
             ],
         ]);
     }

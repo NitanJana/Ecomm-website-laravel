@@ -1,8 +1,4 @@
-<div class="card">
-    <div class="card-header">
-      Panel 
-    </div>
-    <div class="card-body">
-      Panel Footer
-    </div>
-  </div>
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  © 2021 Copyright:
+  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+</div>

@@ -1,7 +1,5 @@
 @extends('layouts.master')
-@push('title')
-    <title>E-Comm Project</title>
-@endpush
+
 @section('content')
     <div class="container custom-product">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -18,11 +16,13 @@
                     @foreach ($products as $item)
                         <div class="carousel-inner">
                             <div class="carousel-item {{ $item['id'] == 1 ? 'active' : '' }}">
-                                <img src="{{ $item['gallery'] }}" class="slider-img d-block w-100" alt="...">
-                                <div class="carousel-caption slider-text d-none d-md-block">
-                                    <h5>{{ $item['name'] }}</h5>
-                                    <p>{{ $item['description'] }}</p>
-                                </div>
+                                <a href="detail/{{$item['id']}}">
+                                    <img src="{{ $item['gallery'] }}" class="slider-img d-block w-100" alt="...">
+                                    <div class="carousel-caption slider-text d-none d-md-block">
+                                        <h5>{{ $item['name'] }}</h5>
+                                        <p>{{ $item['description'] }}</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     @endforeach
@@ -44,10 +44,12 @@
             <h3>Trending Products</h3>
             @foreach ($products as $item)
             <div class="trending-item">
-                <img src="{{ $item['gallery'] }}" class="trending-image" alt="...">
-                <div class="">
-                    <h5>{{ $item['name'] }}</h5>
-                </div>
+                <a class = "text-decoration-none" href="detail/{{$item['id']}}">
+                    <img src="{{ $item['gallery'] }}" class="trending-image" alt="...">
+                    
+                        <h5 class="">{{ $item['name'] }}</h5>
+                    
+                </a>
             </div>
             @endforeach
         </div>
