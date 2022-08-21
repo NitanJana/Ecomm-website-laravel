@@ -4,8 +4,8 @@
     <div class="container custom-login">
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                @csrf
-                <form action="/placeholder bg-light" method="POST">
+                <form action="register" method="POST">
+                    @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">User Name</label>
                         <input type="text" name="name" class="form-control placeholder bg-light" id="exampleInputEmail1" placeholder="User Name"
